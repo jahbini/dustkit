@@ -2,3 +2,5 @@
 node_modules
 /.svelte-kit
 /package
+old-svelte.config.js
+.vscode/tasks.json

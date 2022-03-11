@@ -21,24 +21,27 @@ const config = {
 			allowed: ['PATCH', 'DELETE']
 		},
 	
-		// hydrate the <div id="svelte"> element in src/app.html
+		// do not hydrate the <div id="svelte"> element in src/app.html
 		// target: '#svelte', // install time error
-	vite: {
-		server: {
-			hmr: {
-				clientPort: process.env.HMR_HOST ? 443 : 24678,
-				host: process.env.HMR_HOST
-					? process.env.HMR_HOST.substring('https://'.length)
-					: 'localhost'
-			}
-		},
+		vite: {
+			server: {
+				hmr: {
+					clientPort: process.env.HMR_HOST ? 443 : 24678,
+					host: process.env.HMR_HOST
+						? process.env.HMR_HOST.substring('https://'.length)
+						: 'localhost'
+				}
+			},
 
-		plugins: [
-			coffee({
-				jsx: false
-			})
-		]
-	}}
+			plugins: [
+				coffee({
+					jsx: false
+				})
+			]
+		}
+
+	}
+
 };
 
 export default config;
