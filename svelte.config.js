@@ -19,8 +19,8 @@ const config = {
 		// Override http methods in the Todo forms
 		methodOverride: {
 			allowed: ['PATCH', 'DELETE']
-		}
-	},
+		},
+	
 		// hydrate the <div id="svelte"> element in src/app.html
 		// target: '#svelte', // install time error
 	vite: {
@@ -38,7 +38,7 @@ const config = {
 				jsx: false
 			})
 		]
-	}
+	}}
 };
 
 export default config;
